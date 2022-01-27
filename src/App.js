@@ -1,17 +1,13 @@
 import "./styles.css";
+import Title from "./components/Title";
+import Main from "./components/Main";
 
-const App = () => {
+export default function App() {
   return (
     <div className="App">
       <div className="native">native</div>
-      <div className="main">
-        <div className="title">title</div>
-        <div className="nav">nav</div>
-        <div className="total">total ranking</div>
-        <div className="HackerNews">hacker news</div>
-      </div>
+      <Title />
+      <Main />
     </div>
   );
-};
-
-export default App;
+}
