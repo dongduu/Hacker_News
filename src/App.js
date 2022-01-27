@@ -1,10 +1,17 @@
 import "./styles.css";
 
-export default function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>Hacker News</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <div className="native">native</div>
+      <div className="main">
+        <div className="title">title</div>
+        <div className="nav">nav</div>
+        <div className="total">total ranking</div>
+        <div className="HackerNews">hacker news</div>
+      </div>
     </div>
   );
-}
+};
+
+export default App;

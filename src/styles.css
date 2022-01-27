@@ -1,4 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+}
 .App {
-  font-family: sans-serif;
-  text-align: center;
+  height: 812px;
+  width: 375px;
+  border: solid black 3px;
+}
+.native {
+  height: 44px;
+  width: 375px;
+  border: solid black 2px;
+}
+.main {
+  height: 768px;
+  width: 375px;
+  border: solid red 2px;
+}
+.title {
+  height: 60px;
+  width: 375px;
+  border: solid red 1px;
+}
+.nav {
+  height: 40px;
+  width: 375px;
+  border: solid green 1px;
+}
+.total {
+  height: 250px;
+  width: 375px;
+  border: solid green 1px;
+}
+.HackerNews {
+  height: 418px;
+  width: 375px;
+  border: solid green 1px;
 }
