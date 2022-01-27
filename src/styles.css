@@ -20,28 +20,3 @@
   width: 375px;
   border: solid black 2px;
 }
-.main {
-  height: 768px;
-  width: 375px;
-  border: solid red 2px;
-}
-.title {
-  height: 60px;
-  width: 375px;
-  border: solid red 1px;
-}
-.nav {
-  height: 40px;
-  width: 375px;
-  border: solid green 1px;
-}
-.total {
-  height: 250px;
-  width: 375px;
-  border: solid green 1px;
-}
-.HackerNews {
-  height: 418px;
-  width: 375px;
-  border: solid green 1px;
-}
