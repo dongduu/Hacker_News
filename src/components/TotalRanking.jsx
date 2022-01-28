@@ -1,7 +1,8 @@
 // import React, { useState } from "react";
+import Ranking from "./Ranking";
 
 const rankingBoxStyle = {
-  height: "250px",
+  height: "285px",
   width: "375px",
   border: "solid green 1px"
 };
@@ -15,7 +16,7 @@ const TotalRanking = () => {
   return (
     <div style={rankingBoxStyle}>
       <div style={titleStyle}>Total Ranking 5 Now</div>
-      {/* <Ranking /> */}
+      <Ranking />
     </div>
   );
 };

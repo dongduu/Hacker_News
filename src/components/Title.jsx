@@ -39,11 +39,11 @@ const qeustionStyle = {
 const Title = () => {
   return (
     <div style={titleBoxStyle}>
-      <img src="../image/logo" alt="" style={logoStyle} />
+      <img src="./images/logo.png" alt="logo" style={logoStyle} />
       <p style={pStyle}>React</p>
       <div style={titleStyle}>Hecker News</div>
-      <img src="../image/darkmode" alt="" style={darkModeStyle} />
-      <img src="../image/qeustion" alt="" style={qeustionStyle} />
+      <img src="./images/darkmode.png" alt="darkmode" style={darkModeStyle} />
+      <img src="./images/question.png" alt="question" style={qeustionStyle} />
     </div>
   );
 };
