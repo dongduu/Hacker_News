@@ -9,15 +9,15 @@ const NavBox = styled.div`
 `;
 
 const NavBtn = styled.a`
-  font-family: Roboto;
   display: inline-block;
   width: 83.75px;
   height: 40px;
-  color: #767676;
+  font-family: Roboto;
+  font-size: 18px;
   line-height: 40px;
   text-align: center;
+  color: #767676;
   border-bottom: 1px solid #ff6600;
-  font-size: 18px;
 `;
 
 const Nav = () => {

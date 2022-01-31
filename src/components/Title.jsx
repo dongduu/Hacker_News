@@ -43,10 +43,7 @@ const Title = () => {
       <Logo>
         <img src={require("./images/logo.png")} alt="logo" />
       </Logo>
-      <MainTitle>
-        <p>ReHecker</p>
-        <p>News</p>
-      </MainTitle>
+      <MainTitle>ReHecker News</MainTitle>
       <DarkMode>
         <img src={require("./images/moon.png")} alt="darkmode" />
       </DarkMode>
