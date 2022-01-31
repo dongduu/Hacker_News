@@ -1,38 +1,24 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
-// const navBoxStyle = {
-//   position: "relative",
-//   height: "40px",
-//   width: "375px",
-//   fontSize: "18px"
-// };
-// const initialStyle = {
-//   display: "inline-block",
-//   width: "84px",
-//   height: "40px",
-//   position: "absolute",
-//   color: "#999",
-//   textAlign: "center",
-//   alignItems: "center",
-//   top: "0",
-//   borderBottom: "2px solid #F0F0F6"
-// };
-// const newsiInitialStyle = {
-//   ...initialStyle,
-//   left: "20px"
-// };
-// const showiInitialStyle = {
-//   ...initialStyle,
-//   left: "104px"
-// };
-// const askiInitialStyle = {
-//   ...initialStyle,
-//   right: "104px"
-// };
-// const jobsiInitialStyle = {
-//   ...initialStyle,
-//   right: "20px"
-// };
+const NavBox = styled.div`
+  position: relative;
+  height: 40px;
+  width: 375px;
+  padding: 0 20px 0;
+`;
+
+const NavBtn = styled.a`
+  font-family: Roboto;
+  display: inline-block;
+  width: 83.75px;
+  height: 40px;
+  color: #767676;
+  line-height: 40px;
+  text-align: center;
+  border-bottom: 1px solid #ff6600;
+  font-size: 18px;
+`;
 
 const Nav = () => {
   // const [newsStyle, setNewsStyle] = useState(newsiInitialStyle);
@@ -81,12 +67,12 @@ const Nav = () => {
   // };
 
   return (
-    <nav>
-      <a href="javascript:void(0)">News</a>
-      <a href="javascript:void(0)">Show</a>
-      <a href="javascript:void(0)">Ask</a>
-      <a href="javascript:void(0)">Jobs</a>
-    </nav>
+    <NavBox>
+      <NavBtn href="">Article</NavBtn>
+      <NavBtn href="/Show">Show</NavBtn>
+      <NavBtn href="/Ask">Ask</NavBtn>
+      <NavBtn href="/Jobs">Jobs</NavBtn>
+    </NavBox>
   );
 };
 

@@ -5,8 +5,7 @@ import HackerNews from "./HackerNews";
 
 const mainStyle = {
   height: "708px",
-  width: "375px",
-  border: "solid red 2px"
+  width: "375px"
 };
 
 const Main = () => {

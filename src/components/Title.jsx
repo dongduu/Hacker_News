@@ -3,7 +3,6 @@ import styled from "styled-components";
 const TitleDiv = styled.div`
   height: 60px;
   width: 375px;
-  border: solid red 1px;
   position: relative;
 `;
 

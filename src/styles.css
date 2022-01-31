@@ -13,9 +13,10 @@
 .App {
   height: 812px;
   width: 375px;
-  border: solid black 3px;
+  border: solid black 1px;
 }
 .native {
   height: 44px;
   width: 375px;
+  background-color: #999;
 }

@@ -2,8 +2,7 @@
 
 const hackerNewsStyle = {
   height: "418px",
-  width: "375px",
-  border: "solid green 1px"
+  width: "375px"
 };
 const titleStyle = {
   marginTop: "32px",
