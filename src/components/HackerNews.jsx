@@ -1,21 +1,23 @@
-// import React, { useState } from "react";
+import styled from "styled-components";
 
-const hackerNewsStyle = {
-  height: "418px",
-  width: "375px"
-};
-const titleStyle = {
-  marginTop: "32px",
-  marginLeft: "20px",
-  fontSize: "18px"
-};
+const HackerNewsBox = styled.div`
+  height: 418px;
+  width: 375px;
+  border: 1px solid green;
+`;
+
+const SelectStyle = styled.div`
+  width: 375px;
+  height: 52px;
+  border: 1px solid green;
+  margin-top: 16px;
+`;
 
 const HackerNews = () => {
   return (
-    <div style={hackerNewsStyle}>
-      <div style={titleStyle}>Enjoy Hacker News!</div>
-      {/* <News /> */}
-    </div>
+    <HackerNewsBox>
+      <SelectStyle></SelectStyle>
+    </HackerNewsBox>
   );
 };
 

@@ -14,6 +14,7 @@ const Logo = styled.div`
 
 const MainTitle = styled.div`
   position: absolute;
+  width: 20px;
   top: 16px;
   left: 60px;
   font-size: 14px;

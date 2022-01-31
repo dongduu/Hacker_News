@@ -5,9 +5,11 @@ import styled from "styled-components";
 const RankingBox = styled.div`
   height: 583px;
   width: 375px;
+  border: red 1px solid;
 `;
 
 const RankingTitle = styled.div`
+  width: 150px;
   margin: 36px 20px 24px;
   font-size: 32px;
   line-height: 40px;
