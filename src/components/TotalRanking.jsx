@@ -15,6 +15,7 @@ const RankingTitle = styled.div`
 `;
 
 const RankingBackground = styled.div`
+  position: relative;
   width: 375px;
   height: 427px;
   background-color: #f2f3f7;
