@@ -1,13 +1,11 @@
 import "./styles.css";
-import Title from "./components/Title";
-import Main from "./components/Main";
+import Home from "./pages/Home";
 
 export default function App() {
   return (
     <div className="App">
       <div className="native" />
-      <Title />
-      <Main />
+      <Home />
     </div>
   );
 }

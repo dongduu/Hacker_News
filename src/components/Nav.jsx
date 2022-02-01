@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const NavBox = styled.div`
@@ -68,7 +69,9 @@ const Nav = () => {
 
   return (
     <NavBox>
-      <NavBtn href="/Article">Article</NavBtn>
+      <NavBtn href="/Article">
+        Article
+      </NavBtn>
       <NavBtn href="/Show">Show</NavBtn>
       <NavBtn href="/Ask">Ask</NavBtn>
       <NavBtn href="/Jobs">Jobs</NavBtn>
