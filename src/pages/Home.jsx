@@ -1,13 +1,13 @@
 import Title from "../components/Title";
 import Nav from "../components/Nav";
-import Main from "../components/Main";
+import HomeMain from "../components/HomeMain";
 
 const Home = () => {
   return (
     <div>
       <Title />
       <Nav />
-      <Main />
+      <HomeMain />
     </div>
   );
 };

@@ -42,7 +42,7 @@ const Help = styled.div`
 const Title = () => {
   return (
     <TitleDiv>
-      <Logo href="/Home">
+      <Logo href="/">
         <img src={require("./images/logo.png")} alt="logo" />
       </Logo>
       <MainTitle href="">ReHecker News</MainTitle>
