@@ -6,13 +6,14 @@ const TitleDiv = styled.div`
   position: relative;
 `;
 
-const Logo = styled.div`
+const Logo = styled.a`
+  display: block;
   position: absolute;
   top: 17px;
   left: 21px;
 `;
 
-const MainTitle = styled.div`
+const MainTitle = styled.a`
   position: absolute;
   width: 20px;
   top: 16px;
@@ -41,10 +42,11 @@ const Help = styled.div`
 const Title = () => {
   return (
     <TitleDiv>
-      <Logo>
+      <Logo href="">
         <img src={require("./images/logo.png")} alt="logo" />
       </Logo>
-      <MainTitle>ReHecker News</MainTitle>
+      <MainTitle href="">ReHecker News</MainTitle>
+
       <DarkMode>
         <img src={require("./images/moon.png")} alt="darkmode" />
       </DarkMode>

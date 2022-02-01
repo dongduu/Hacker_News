@@ -68,7 +68,7 @@ const Nav = () => {
 
   return (
     <NavBox>
-      <NavBtn href="">Article</NavBtn>
+      <NavBtn href="/Article">Article</NavBtn>
       <NavBtn href="/Show">Show</NavBtn>
       <NavBtn href="/Ask">Ask</NavBtn>
       <NavBtn href="/Jobs">Jobs</NavBtn>
