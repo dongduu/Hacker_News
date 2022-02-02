@@ -1,13 +1,13 @@
 import Title from "../components/Title";
 import Nav from "../components/Nav";
-import VeiwNew from "../components/VeiwNew";
+import View from "../components/View";
 
 const Article = () => {
   return (
     <div>
       <Title />
       <Nav />
-      <VeiwNew />
+      <View />
       <div>Article page</div>
     </div>
   );

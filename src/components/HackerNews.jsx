@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import View from "../components/View";
 
 const HackerNewsBox = styled.div`
   height: 418px;
@@ -6,17 +7,10 @@ const HackerNewsBox = styled.div`
   border: 1px solid green;
 `;
 
-const SelectStyle = styled.div`
-  width: 375px;
-  height: 52px;
-  border: 1px solid green;
-  margin-top: 16px;
-`;
-
 const HackerNews = () => {
   return (
     <HackerNewsBox>
-      <SelectStyle></SelectStyle>
+      <View />
     </HackerNewsBox>
   );
 };
