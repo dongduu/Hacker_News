@@ -5,6 +5,7 @@ const TopCardBox = styled.div`
   width: 335px;
   height: 113px;
   margin-bottom: 12px;
+  margin-left: 20px;
   border-radius: 16px;
   background: #fff;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);

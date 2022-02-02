@@ -3,9 +3,9 @@ import View from "../components/View";
 import TopCard from "../components/TopCard";
 
 const HackerNewsBox = styled.div`
-  height: 410px;
-  width: 335px;
-  padding: 8px 20px 0;
+  position: relative;
+  width: 375px;
+  padding-top: 8px;
   border: 1px solid green;
 `;
 
