@@ -3,7 +3,6 @@ import Ranking from "./Ranking";
 import styled from "styled-components";
 
 const RankingBox = styled.div`
-  height: 583px;
   width: 375px;
 `;
 
