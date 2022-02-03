@@ -1,6 +1,7 @@
 // import React, { useState } from "react";
 import TotalRanking from "./TotalRanking";
 import HackerNews from "./HackerNews";
+import Stories from "./stories/stories";
 
 const mainStyle = {
   height: "708px",
@@ -10,6 +11,7 @@ const mainStyle = {
 const HomeMain = () => {
   return (
     <div style={mainStyle}>
+      {/* <Stories /> */}
       <TotalRanking />
       <HackerNews />
     </div>
