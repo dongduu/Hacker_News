@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import UserInfo from "./UserInfo";
 
-const TopCardBox = styled.div`
+const BasicCardBox = styled.div`
   position: relative;
   width: 335px;
   height: 137px;
@@ -25,12 +25,12 @@ const NewsTitle = styled.strong`
 
 const BasicCard = () => {
   return (
-    <TopCardBox>
+    <BasicCardBox>
       <NewsTitle>
         Wg-access-server: WireGuard VPN server and web UI for device management
       </NewsTitle>
       <UserInfo />
-    </TopCardBox>
+    </BasicCardBox>
   );
 };
 
