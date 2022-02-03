@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import UserInfo from "./UserInfo";
 
 const TopCardBox = styled.div`
   position: relative;
@@ -15,19 +16,11 @@ const NewsTitle = styled.strong`
   position: absolute;
   top: 16px;
   left: 16px;
+  width: 300px;
   font-family: Roboto;
   font-size: 18px;
   line-height: 24px;
   color: #111;
-`;
-
-const NewsInfoBox = styled.div`
-  position: absolute;
-  top: 76px;
-  left: 16px;
-  width: 303px;
-  height: 25px;
-  border-top: #f0f0f6 solid 1px;
 `;
 
 const TopCard = () => {
@@ -36,7 +29,7 @@ const TopCard = () => {
       <NewsTitle>
         AdaCore and Ferrous Systems Joining Forces to Support Rust
       </NewsTitle>
-      <NewsInfoBox></NewsInfoBox>
+      <UserInfo />
     </TopCardBox>
   );
 };

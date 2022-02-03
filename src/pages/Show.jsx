@@ -1,6 +1,7 @@
 import Title from "../components/Title";
 import Nav from "../components/Nav";
 import View from "../components/View";
+import TopCard from "../components/TopCard";
 
 const Show = () => {
   return (
@@ -8,7 +9,7 @@ const Show = () => {
       <Title />
       <Nav />
       <View />
-      <div>Show page</div>
+      <TopCard />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import Title from "../components/Title";
 import Nav from "../components/Nav";
 import View from "../components/View";
+import TopCard from "../components/TopCard";
 
 const Article = () => {
   return (
@@ -8,7 +9,7 @@ const Article = () => {
       <Title />
       <Nav />
       <View />
-      <div>Article page</div>
+      <TopCard />
     </div>
   );
 };
