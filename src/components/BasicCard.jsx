@@ -4,7 +4,7 @@ import UserInfo from "./UserInfo";
 const TopCardBox = styled.div`
   position: relative;
   width: 335px;
-  height: 113px;
+  height: 137px;
   margin-bottom: 12px;
   margin-left: 20px;
   border-radius: 16px;
@@ -23,15 +23,15 @@ const NewsTitle = styled.strong`
   color: #111;
 `;
 
-const TopCard = () => {
+const BasicCard = () => {
   return (
     <TopCardBox>
       <NewsTitle>
-        AdaCore and Ferrous Systems Joining Forces to Support Rust
+        Wg-access-server: WireGuard VPN server and web UI for device management
       </NewsTitle>
       <UserInfo />
     </TopCardBox>
   );
 };
 
-export default TopCard;
+export default BasicCard;

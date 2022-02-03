@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const UserInfoBox = styled.div`
   position: absolute;
-  top: 76px;
+  bottom: 12px;
   left: 16px;
   width: 303px;
   height: 25px;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import View from "../components/View";
-import TopCard from "../components/TopCard";
+import BasicCard from "../components/BasicCard";
 
 const HackerNewsBox = styled.div`
   position: relative;
@@ -13,7 +13,7 @@ const HackerNews = () => {
   return (
     <HackerNewsBox>
       <View />
-      <TopCard />
+      <BasicCard />
     </HackerNewsBox>
   );
 };

@@ -1,7 +1,7 @@
 import Title from "../components/Title";
 import Nav from "../components/Nav";
 import View from "../components/View";
-import TopCard from "../components/TopCard";
+import BasicCard from "../components/BasicCard";
 
 const Show = () => {
   return (
@@ -9,7 +9,7 @@ const Show = () => {
       <Title />
       <Nav />
       <View />
-      <TopCard />
+      <BasicCard />
     </div>
   );
 };
