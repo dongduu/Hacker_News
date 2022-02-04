@@ -1,7 +1,7 @@
 import Title from "../components/Title";
 import Nav from "../components/Nav";
 import View from "../components/View";
-import { Stories } from "../components/stories/stories";
+import { BasicCard } from "../components/Card/BasicCard";
 
 const Jobs = () => {
   return (
@@ -9,7 +9,7 @@ const Jobs = () => {
       <Title />
       <Nav />
       <View />
-      <Stories />
+      <BasicCard />
     </div>
   );
 };

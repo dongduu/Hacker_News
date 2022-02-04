@@ -1,5 +1,8 @@
+import React, { useEffect, useState } from "react";
+import { NewsTitle } from "./StoryType2";
+import { getStories } from "../../services/api";
 import styled from "styled-components";
-import { UserInfo } from "./UserInfo";
+import { UserInfo } from "../UserInfo";
 
 const DetailCardBox = styled.div`
   position: relative;
@@ -38,28 +41,21 @@ const NewsTime = styled.p`
   color: rgba(255, 102, 0, 0.5);
 `;
 
-const NewsTtile = styled.strong`
-  display: inline-block;
-  width: 303px;
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  margin-left: 16px;
-  color: #111;
-`;
-
 export const DetailCard = () => {
-  return (
+  const [storyIds, setStoryIds] = useState([]);
+
+  useEffect(() => {
+    getStories().then((ids) => setStoryIds(ids));
+  }, []);
+
+  return storyIds.slice(0, 10).map((storyId, i) => (
     <DetailCardBox>
       <NewsHeader>
         <NewsNumber>001</NewsNumber>
         <NewsTime>2 hours ago</NewsTime>
       </NewsHeader>
-      <NewsTtile>
-        We purchased a machine from China and it came with malware preinstalled
-      </NewsTtile>
+      <NewsTitle key={i} storyId={storyId} />
       <UserInfo />
     </DetailCardBox>
-  );
+  ));
 };

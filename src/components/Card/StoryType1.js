@@ -6,7 +6,7 @@ const Title = styled.strong`
   position: absolute;
   top: 16px;
   left: 16px;
-  width: 300px;
+  width: 303px;
   font-family: Roboto;
   font-size: 18px;
   line-height: 24px;
