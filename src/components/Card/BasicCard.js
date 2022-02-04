@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NewsTitle } from "./StoryType1";
+import { NewsTitle } from "./Story";
 import { getStories } from "../../services/api";
 import styled from "styled-components";
 import { UserInfo } from "../UserInfo";
@@ -15,6 +15,17 @@ const BasicCardBox = styled.div`
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
 `;
 
+const Title = styled.strong`
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 303px;
+  font-family: Roboto;
+  font-size: 18px;
+  line-height: 24px;
+  color: #111;
+`;
+
 export const BasicCard = () => {
   const [storyIds, setStoryIds] = useState([]);
 
@@ -24,7 +35,9 @@ export const BasicCard = () => {
 
   return storyIds.slice(0, 10).map((storyId, i) => (
     <BasicCardBox>
-      <NewsTitle key={i} storyId={storyId} />
+      <Title>
+        <NewsTitle key={i} storyId={storyId} />
+      </Title>
       <UserInfo />
     </BasicCardBox>
   ));

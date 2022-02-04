@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NewsTitle } from "./StoryType2";
+import { NewsTitle } from "./Story";
 import { getStories } from "../../services/api";
 import styled from "styled-components";
 import { UserInfo } from "../UserInfo";
@@ -40,6 +40,16 @@ const NewsTime = styled.p`
   line-height: 16px;
   color: rgba(255, 102, 0, 0.5);
 `;
+const Title = styled.strong`
+  display: inline-block;
+  width: 303px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 16px;
+  color: #111;
+`;
 
 export const DetailCard = () => {
   const [storyIds, setStoryIds] = useState([]);
@@ -54,7 +64,9 @@ export const DetailCard = () => {
         <NewsNumber>001</NewsNumber>
         <NewsTime>2 hours ago</NewsTime>
       </NewsHeader>
-      <NewsTitle key={i} storyId={storyId} />
+      <Title>
+        <NewsTitle key={i} storyId={storyId} />
+      </Title>
       <UserInfo />
     </DetailCardBox>
   ));
