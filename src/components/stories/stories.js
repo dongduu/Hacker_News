@@ -1,6 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Story } from "./story";
+import { NewsTitle } from "./story";
 import { getStories } from "../../services/api";
+import styled from "styled-components";
+import { UserInfo } from "../UserInfo";
+
+const BasicCardBox = styled.div`
+  position: relative;
+  width: 335px;
+  height: 137px;
+  margin-bottom: 12px;
+  margin-left: 20px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+`;
 
 export const Stories = () => {
   const [storyIds, setStoryIds] = useState([]);
@@ -9,7 +22,10 @@ export const Stories = () => {
     getStories().then((ids) => setStoryIds(ids));
   }, []);
 
-  return storyIds
-    .slice(0, 10)
-    .map((storyId, i) => <Story key={i} storyId={storyId} />);
+  return storyIds.slice(0, 10).map((storyId, i) => (
+    <BasicCardBox>
+      <NewsTitle key={i} storyId={storyId} />
+      <UserInfo />
+    </BasicCardBox>
+  ));
 };

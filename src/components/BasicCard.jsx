@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { UserInfo } from "./UserInfo";
+import { Stories } from "./stories/stories";
 
 const BasicCardBox = styled.div`
   position: relative;
@@ -25,11 +26,15 @@ const NewsTitle = styled.strong`
 
 export const BasicCard = () => {
   return (
-    <BasicCardBox>
-      <NewsTitle>
-        Wg-access-server: WireGuard VPN server and web UI for device management
-      </NewsTitle>
-      <UserInfo />
-    </BasicCardBox>
+    <>
+      <BasicCardBox>
+        <NewsTitle>
+          Wg-access-server: WireGuard VPN server and web UI for device
+          management
+        </NewsTitle>
+        <UserInfo />
+      </BasicCardBox>
+      <Stories />
+    </>
   );
 };
