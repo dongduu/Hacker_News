@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
+const RankingBox = styled.div`
+  width: 1500px;
+  height: 500px;
+`;
+
 const Top = styled.div`
-  position: absolute;
-  top: 54px;
-  left: 88px;
+  position: relative;
+  display: inline-block;
+  margin: 54px 0px 73px 88px;
   width: 200px;
   height: 300px;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -50,10 +55,32 @@ const Writer = styled.p`
 
 export const Ranking = () => {
   return (
-    <Top>
-      <Rank>01</Rank>
-      <Article>How much did a tunic cost in the Roman Empair? (2021)</Article>
-      <Writer>bryanrasmussen</Writer>
-    </Top>
+    <RankingBox>
+      <Top>
+        <Rank>01</Rank>
+        <Article>How much did a tunic cost in the Roman Empair? (2021)</Article>
+        <Writer>bryanrasmussen</Writer>
+      </Top>
+      <Top>
+        <Rank>02</Rank>
+        <Article>How much did a tunic cost in the Roman Empair? (2021)</Article>
+        <Writer>bryanrasmussen</Writer>
+      </Top>
+      <Top>
+        <Rank>03</Rank>
+        <Article>How much did a tunic cost in the Roman Empair? (2021)</Article>
+        <Writer>bryanrasmussen</Writer>
+      </Top>
+      <Top>
+        <Rank>04</Rank>
+        <Article>How much did a tunic cost in the Roman Empair? (2021)</Article>
+        <Writer>bryanrasmussen</Writer>
+      </Top>
+      <Top>
+        <Rank>05</Rank>
+        <Article>How much did a tunic cost in the Roman Empair? (2021)</Article>
+        <Writer>bryanrasmussen</Writer>
+      </Top>
+    </RankingBox>
   );
 };
