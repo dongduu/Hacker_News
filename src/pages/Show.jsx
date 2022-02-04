@@ -1,9 +1,9 @@
-import Title from "../components/Title";
-import Nav from "../components/Nav";
-import View from "../components/View";
-import BasicCard from "../components/BasicCard";
+import { Title } from "../components/Title";
+import { Nav } from "../components/Nav";
+import { View } from "../components/View";
+import { BasicCard } from "../components/BasicCard";
 
-const Show = () => {
+export const Show = () => {
   return (
     <div>
       <Title />
@@ -13,5 +13,3 @@ const Show = () => {
     </div>
   );
 };
-
-export default Show;

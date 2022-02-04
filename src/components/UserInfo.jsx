@@ -67,7 +67,7 @@ const CommentInfo = styled.p`
   color: #ff6600;
 `;
 
-const UserInfo = () => {
+export const UserInfo = () => {
   return (
     <UserInfoBox>
       <UserNameBox>
@@ -87,5 +87,3 @@ const UserInfo = () => {
     </UserInfoBox>
   );
 };
-
-export default UserInfo;

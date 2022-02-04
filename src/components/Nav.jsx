@@ -20,7 +20,7 @@ const NavBtn = styled.a`
   border-bottom: 1px solid #ff6600;
 `;
 
-const Nav = () => {
+export const Nav = () => {
   // const [newsStyle, setNewsStyle] = useState(newsiInitialStyle);
   // const [newsClick, setNewsClick] = useState("default");
   // const [showStyle, setShowStyle] = useState(showiInitialStyle);
@@ -75,5 +75,3 @@ const Nav = () => {
     </NavBox>
   );
 };
-
-export default Nav;

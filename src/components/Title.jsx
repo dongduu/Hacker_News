@@ -39,7 +39,7 @@ const Help = styled.div`
   right: 26px;
 `;
 
-const Title = () => {
+export const Title = () => {
   return (
     <TitleDiv>
       <Logo href="/">
@@ -56,5 +56,3 @@ const Title = () => {
     </TitleDiv>
   );
 };
-
-export default Title;

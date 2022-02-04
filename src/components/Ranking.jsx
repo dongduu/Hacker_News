@@ -48,7 +48,7 @@ const Writer = styled.p`
   color: #999999;
 `;
 
-const Ranking = () => {
+export const Ranking = () => {
   return (
     <Top>
       <Rank>01</Rank>
@@ -57,5 +57,3 @@ const Ranking = () => {
     </Top>
   );
 };
-
-export default Ranking;

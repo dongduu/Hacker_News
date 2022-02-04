@@ -1,8 +1,8 @@
-import Title from "../components/Title";
-import Nav from "../components/Nav";
-import HomeMain from "../components/HomeMain";
+import { Title } from "../components/Title";
+import { Nav } from "../components/Nav";
+import { HomeMain } from "../components/HomeMain";
 
-const Home = () => {
+export const Home = () => {
   return (
     <div>
       <Title />
@@ -11,5 +11,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

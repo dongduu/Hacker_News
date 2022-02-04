@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import View from "../components/View";
-import BasicCard from "../components/BasicCard";
+import { View } from "../components/View";
+import { BasicCard } from "../components/BasicCard";
 
 const HackerNewsBox = styled.div`
   position: relative;
@@ -8,7 +8,7 @@ const HackerNewsBox = styled.div`
   padding-top: 8px;
 `;
 
-const HackerNews = () => {
+export const HackerNews = () => {
   return (
     <HackerNewsBox>
       <View />
@@ -16,5 +16,3 @@ const HackerNews = () => {
     </HackerNewsBox>
   );
 };
-
-export default HackerNews;

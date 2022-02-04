@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import Article from "../pages/Article";
-import Show from "../pages/Show";
-import Ask from "../pages/Ask";
-import Jobs from "../pages/Jobs";
+import { Home } from "../pages/Home";
+import { Article } from "../pages/Article";
+import { Show } from "../pages/Show";
+import { Ask } from "../pages/Ask";
+import { Jobs } from "../pages/Jobs";
 
-const Main = () => {
+export const Main = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />}></Route>
@@ -16,5 +16,3 @@ const Main = () => {
     </Routes>
   );
 };
-
-export default Main;

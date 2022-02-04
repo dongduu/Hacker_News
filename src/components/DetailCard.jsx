@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import UserInfo from "./UserInfo";
+import { UserInfo } from "./UserInfo";
 
 const DetailCardBox = styled.div`
   position: relative;
@@ -49,7 +49,7 @@ const NewsTtile = styled.strong`
   color: #111;
 `;
 
-const DetailCard = () => {
+export const DetailCard = () => {
   return (
     <DetailCardBox>
       <NewsHeader>
@@ -63,5 +63,3 @@ const DetailCard = () => {
     </DetailCardBox>
   );
 };
-
-export default DetailCard;

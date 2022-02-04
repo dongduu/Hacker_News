@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-import Ranking from "./Ranking";
+import { Ranking } from "./Ranking";
 import styled from "styled-components";
 
 const RankingBox = styled.div`
@@ -21,7 +21,7 @@ const RankingBackground = styled.div`
   background-color: #f2f3f7;
 `;
 
-const TotalRanking = () => {
+export const TotalRanking = () => {
   return (
     <RankingBox>
       <RankingTitle>Current Total Top 5</RankingTitle>
@@ -31,5 +31,3 @@ const TotalRanking = () => {
     </RankingBox>
   );
 };
-
-export default TotalRanking;

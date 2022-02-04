@@ -53,7 +53,7 @@ const ReadingIcon = styled.img`
   right: 21px;
 `;
 
-const View = () => {
+export const View = () => {
   return (
     <Veiwbox>
       <NewBox>
@@ -68,5 +68,3 @@ const View = () => {
     </Veiwbox>
   );
 };
-
-export default View;

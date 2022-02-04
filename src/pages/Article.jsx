@@ -1,9 +1,9 @@
-import Title from "../components/Title";
-import Nav from "../components/Nav";
-import View from "../components/View";
-import BasicCard from "../components/BasicCard";
+import { Title } from "../components/Title";
+import { Nav } from "../components/Nav";
+import { View } from "../components/View";
+import { BasicCard } from "../components/BasicCard";
 
-const Article = () => {
+export const Article = () => {
   return (
     <div>
       <Title />
@@ -13,5 +13,3 @@ const Article = () => {
     </div>
   );
 };
-
-export default Article;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import UserInfo from "./UserInfo";
+import { UserInfo } from "./UserInfo";
 
 const BasicCardBox = styled.div`
   position: relative;
@@ -23,7 +23,7 @@ const NewsTitle = styled.strong`
   color: #111;
 `;
 
-const BasicCard = () => {
+export const BasicCard = () => {
   return (
     <BasicCardBox>
       <NewsTitle>
@@ -33,5 +33,3 @@ const BasicCard = () => {
     </BasicCardBox>
   );
 };
-
-export default BasicCard;
