@@ -1,3 +1,6 @@
+import React, { useEffect, useState } from "react";
+import { NewsTitle } from "./Card/Story";
+import { getStories } from "../services/api";
 import styled from "styled-components";
 
 const RankingBox = styled.div`
@@ -54,33 +57,21 @@ const Writer = styled.p`
 `;
 
 export const Ranking = () => {
-  return (
+  const [storyIds, setStoryIds] = useState([]);
+
+  useEffect(() => {
+    getStories().then((ids) => setStoryIds(ids));
+  }, []);
+
+  return storyIds.slice(0, 5).map((storyId, i) => (
     <RankingBox>
       <Top>
         <Rank>01</Rank>
-        <Article>How much did a tunic cost in the Roman Empair? (2021)</Article>
-        <Writer>bryanrasmussen</Writer>
-      </Top>
-      <Top>
-        <Rank>02</Rank>
-        <Article>How much did a tunic cost in the Roman Empair? (2021)</Article>
-        <Writer>bryanrasmussen</Writer>
-      </Top>
-      <Top>
-        <Rank>03</Rank>
-        <Article>How much did a tunic cost in the Roman Empair? (2021)</Article>
-        <Writer>bryanrasmussen</Writer>
-      </Top>
-      <Top>
-        <Rank>04</Rank>
-        <Article>How much did a tunic cost in the Roman Empair? (2021)</Article>
-        <Writer>bryanrasmussen</Writer>
-      </Top>
-      <Top>
-        <Rank>05</Rank>
-        <Article>How much did a tunic cost in the Roman Empair? (2021)</Article>
+        <Article>
+          <NewsTitle key={i} storyId={storyId} />
+        </Article>
         <Writer>bryanrasmussen</Writer>
       </Top>
     </RankingBox>
-  );
+  ));
 };
