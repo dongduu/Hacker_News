@@ -3,11 +3,6 @@ import { NewsTitle } from "./Card/Story";
 import { getStories } from "../services/api";
 import styled from "styled-components";
 
-const RankingBox = styled.div`
-  width: 1500px;
-  height: 500px;
-`;
-
 const Top = styled.div`
   position: relative;
   display: inline-block;
@@ -64,14 +59,12 @@ export const Ranking = () => {
   }, []);
 
   return storyIds.slice(0, 5).map((storyId, i) => (
-    <RankingBox>
-      <Top>
-        <Rank>01</Rank>
-        <Article>
-          <NewsTitle key={i} storyId={storyId} />
-        </Article>
-        <Writer>bryanrasmussen</Writer>
-      </Top>
-    </RankingBox>
+    <Top>
+      <Rank>01</Rank>
+      <Article>
+        <NewsTitle key={i} storyId={storyId} />
+      </Article>
+      <Writer>bryanrasmussen</Writer>
+    </Top>
   ));
 };

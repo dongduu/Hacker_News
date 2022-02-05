@@ -6,6 +6,11 @@ const RankingBox = styled.div`
   width: 375px;
 `;
 
+const SlideBox = styled.div`
+  width: 1500px;
+  height: 500px;
+`;
+
 const RankingTitle = styled.div`
   width: 150px;
   margin: 36px 20px 24px;
@@ -26,7 +31,9 @@ export const TotalRanking = () => {
     <RankingBox>
       <RankingTitle>Current Total Top 5</RankingTitle>
       <RankingBackground>
-        <Ranking />
+        <SlideBox>
+          <Ranking />
+        </SlideBox>
       </RankingBackground>
     </RankingBox>
   );

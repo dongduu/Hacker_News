@@ -10,7 +10,7 @@ export const HomeMain = () => {
   return (
     <div style={mainStyle}>
       <TotalRanking />
-      {/* <HackerNews /> */}
+      <HackerNews />
     </div>
   );
 };
