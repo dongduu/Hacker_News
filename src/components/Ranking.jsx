@@ -66,7 +66,7 @@ export const Ranking = () => {
       {storyIds.slice(0, 5).map((storyId, i) => (
         <SwiperSlide>
           <Top>
-            <Rank>01</Rank>
+            <Rank>0{`${i + 1}`}</Rank>
             <Article>
               <NewsTitle key={i} storyId={storyId} />
             </Article>
