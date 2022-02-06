@@ -21,3 +21,19 @@
   width: 375px;
   background-color: #999;
 }
+
+.basic_nav {
+  color: #767676;
+  border-bottom: 1px solid #ff6600;
+}
+
+.unclicked_nav {
+  color: #767676;
+  border-bottom: 1px solid #767676;
+}
+
+.clicked_nav {
+  color: #ff6600;
+  border-bottom: 2px solid #ff6600;
+  font-weight: 500;
+}

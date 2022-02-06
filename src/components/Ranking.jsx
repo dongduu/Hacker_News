@@ -3,7 +3,7 @@ import { NewsTitle } from "./Card/Story";
 import { getStories } from "../services/api";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import SwiperCore, { Pagination } from "swiper";
 import "swiper/css";
 
 const Top = styled.div`
@@ -54,6 +54,8 @@ const Writer = styled.p`
   color: #999;
 `;
 
+const SwiperBox = styled(Swiper)``;
+
 export const Ranking = () => {
   const [storyIds, setStoryIds] = useState([]);
 
@@ -61,8 +63,10 @@ export const Ranking = () => {
     getStories().then((ids) => setStoryIds(ids));
   }, []);
 
+  SwiperCore.use([Pagination]);
+
   return (
-    <Swiper slidesPerView={1} pagination={{ clickable: true }}>
+    <SwiperBox slidesPerView={1} pagination={{ clickable: true }}>
       {storyIds.slice(0, 5).map((storyId, i) => (
         <SwiperSlide>
           <Top>
@@ -74,6 +78,6 @@ export const Ranking = () => {
           </Top>
         </SwiperSlide>
       ))}
-    </Swiper>
+    </SwiperBox>
   );
 };
