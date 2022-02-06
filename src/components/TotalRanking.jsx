@@ -1,6 +1,9 @@
 // import React, { useState } from "react";
 import { Ranking } from "./Ranking";
 import styled from "styled-components";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/swiper.scss";
 
 const RankingBox = styled.div`
   width: 375px;
@@ -31,7 +34,7 @@ export const TotalRanking = () => {
     <RankingBox>
       <RankingTitle>Current Total Top 5</RankingTitle>
       <RankingBackground>
-        <SlideBox class="swiper-container">
+        <SlideBox>
           <Ranking />
         </SlideBox>
       </RankingBackground>
