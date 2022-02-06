@@ -13,7 +13,8 @@
     "react-moment": "^1.1.1",
     "react-router-dom": "6.2.1",
     "react-scripts": "4.0.0",
-    "styled-components": "5.3.3"
+    "styled-components": "5.3.3",
+    "swiper": "8.0.1"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
@@ -25,10 +26,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }

@@ -48,7 +48,7 @@ const Writer = styled.p`
   font-size: 12px;
   line-height: 16px;
   text-align: center;
-  color: #999999;
+  color: #999;
 `;
 
 export const Ranking = () => {
@@ -59,10 +59,10 @@ export const Ranking = () => {
   }, []);
 
   return storyIds.slice(0, 5).map((storyId, i) => (
-    <Top>
+    <Top class="swiper-wrapper">
       <Rank>01</Rank>
       <Article>
-        <NewsTitle key={i} storyId={storyId} />
+        <NewsTitle class="swiper-slide" key={i} storyId={storyId} />
       </Article>
       <Writer>bryanrasmussen</Writer>
     </Top>

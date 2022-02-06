@@ -43,15 +43,15 @@ export const Title = () => {
   return (
     <TitleDiv>
       <Logo href="/">
-        <img src={require("./images/logo.png")} alt="logo" />
+        <img src={require("../images/logo.png")} alt="logo" />
       </Logo>
       <MainTitle href="">ReHecker News</MainTitle>
 
       <DarkMode>
-        <img src={require("./images/moon.png")} alt="darkmode" />
+        <img src={require("../images/moon.png")} alt="darkmode" />
       </DarkMode>
       <Help>
-        <img src={require("./images/help.png")} alt="help" />
+        <img src={require("../images/help.png")} alt="help" />
       </Help>
     </TitleDiv>
   );

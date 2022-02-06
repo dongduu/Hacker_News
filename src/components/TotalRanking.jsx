@@ -31,7 +31,7 @@ export const TotalRanking = () => {
     <RankingBox>
       <RankingTitle>Current Total Top 5</RankingTitle>
       <RankingBackground>
-        <SlideBox>
+        <SlideBox class="swiper-container">
           <Ranking />
         </SlideBox>
       </RankingBackground>
