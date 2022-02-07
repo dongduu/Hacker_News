@@ -29,7 +29,7 @@ const Rank = styled.strong`
   color: #ff6600;
 `;
 
-const Article = styled.h2`
+const Article = styled.p`
   position: absolute;
   width: 160px;
   height: 96px;

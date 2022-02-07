@@ -20,28 +20,31 @@ const NavBtn = styled.a`
 `;
 
 export const Nav = () => {
-  const [navStyle, setNavStyle] = useState("basic_nav");
+  const [articleStyle, setArticleStyle] = useState("basic_nav");
+  const [showStyle, setShowStyle] = useState("basic_nav");
+  const [askStyle, setAskStyle] = useState("basic_nav");
+  const [jobStyle, setJobStyle] = useState("basic_nav");
 
   const clicked = () => {
-    if (navStyle === "basic_nav" || "unclicked_nav") {
-      setNavStyle("clicked_nav");
-    } else if (navStyle === "cliked_nav") {
-      setNavStyle("unclicked_nav");
+    if (articleStyle === "basic_nav" || "unclicked_nav") {
+      setArticleStyle("clicked_nav");
+    } else if (articleStyle === "cliked_nav") {
+      setArticleStyle("unclicked_nav");
     }
   };
 
   return (
     <NavBox>
-      <NavBtn className={navStyle} href="/Article">
+      <NavBtn className={articleStyle} onClick={clicked} href="/Article">
         Article
       </NavBtn>
-      <NavBtn className={navStyle} href="/Show">
+      <NavBtn className={showStyle} href="/Show">
         Show
       </NavBtn>
-      <NavBtn className={navStyle} href="/Ask">
+      <NavBtn className={askStyle} href="/Ask">
         Ask
       </NavBtn>
-      <NavBtn className={navStyle} href="/Jobs">
+      <NavBtn className={jobStyle} href="/Jobs">
         Jobs
       </NavBtn>
     </NavBox>
