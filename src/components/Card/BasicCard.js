@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { NewsTitle } from "./Story";
-import { getTopStories } from "../../services/api";
+import {
+  getTopStories,
+  getNewStories,
+  getShowStories,
+  getAskStories,
+  getJobStories
+} from "../../services/api";
 import styled from "styled-components";
 import { UserInfo } from "../UserInfo";
 
@@ -26,11 +32,27 @@ const Title = styled.strong`
   color: #111;
 `;
 
-export const BasicCard = () => {
+export const BasicCard = (props) => {
   const [storyIds, setStoryIds] = useState([]);
 
   useEffect(() => {
     getTopStories().then((ids) => setStoryIds(ids));
+  }, []);
+
+  useEffect(() => {
+    getNewStories().then((ids) => setStoryIds(ids));
+  }, []);
+
+  useEffect(() => {
+    getShowStories().then((ids) => setStoryIds(ids));
+  }, []);
+
+  useEffect(() => {
+    getAskStories().then((ids) => setStoryIds(ids));
+  }, []);
+
+  useEffect(() => {
+    getJobStories().then((ids) => setStoryIds(ids));
   }, []);
 
   return storyIds.slice(0, 10).map((storyId, i) => (
