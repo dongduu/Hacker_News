@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NewsTitle } from "./Story";
-import { getStories } from "../../services/api";
+import { getTopStories } from "../../services/api";
 import styled from "styled-components";
 import { UserInfo } from "../UserInfo";
 
@@ -30,7 +30,7 @@ export const BasicCard = () => {
   const [storyIds, setStoryIds] = useState([]);
 
   useEffect(() => {
-    getStories().then((ids) => setStoryIds(ids));
+    getTopStories().then((ids) => setStoryIds(ids));
   }, []);
 
   return storyIds.slice(0, 10).map((storyId, i) => (
