@@ -1,7 +1,7 @@
 import { Title } from "../components/Header/Title";
 import { Nav } from "../components/Header/Nav";
 import { View } from "../components/View";
-import { DetailCard } from "../components/Card/DetailCard";
+import { ArticleList } from "../components/List/ArticleList";
 
 export const Article = () => {
   return (
@@ -9,7 +9,7 @@ export const Article = () => {
       <Title />
       <Nav />
       <View />
-      <DetailCard />
+      <ArticleList />
     </div>
   );
 };
