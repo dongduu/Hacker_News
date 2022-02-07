@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { NewsTitle } from "./Card/Story";
-import { getStories } from "../services/api";
+import { getTopStories } from "../services/api";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "../styles.css";
+import "swiper/scss/pagination";
 import SwiperCore, { Pagination } from "swiper";
 import "swiper/css";
 
@@ -56,17 +58,23 @@ const Writer = styled.p`
 
 const SwiperBox = styled(Swiper)``;
 
+SwiperCore.use([Pagination]);
+
 export const Ranking = () => {
   const [storyIds, setStoryIds] = useState([]);
 
   useEffect(() => {
-    getStories().then((ids) => setStoryIds(ids));
+    getTopStories().then((ids) => setStoryIds(ids));
   }, []);
 
-  SwiperCore.use([Pagination]);
-
   return (
-    <SwiperBox slidesPerView={1} pagination={{ clickable: true }}>
+    <SwiperBox
+      slidesPerView={1}
+      centeredSlides={true}
+      pagination={{
+        clickable: true
+      }}
+    >
       {storyIds.slice(0, 5).map((storyId, i) => (
         <SwiperSlide>
           <Top>

@@ -61,7 +61,7 @@ export const DetailCard = () => {
   return storyIds.slice(0, 10).map((storyId, i) => (
     <DetailCardBox>
       <NewsHeader>
-        <NewsNumber>001</NewsNumber>
+        <NewsNumber>00{`${i + 1}`}</NewsNumber>
         <NewsTime>2 hours ago</NewsTime>
       </NewsHeader>
       <Title>

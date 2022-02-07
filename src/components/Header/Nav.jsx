@@ -32,7 +32,7 @@ export const Nav = () => {
 
   return (
     <NavBox>
-      <NavBtn className={navStyle} onClick={clicked} href="/Article">
+      <NavBtn className={navStyle} href="/Article">
         Article
       </NavBtn>
       <NavBtn className={navStyle} href="/Show">
