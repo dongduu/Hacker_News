@@ -13,7 +13,6 @@ import { UserInfo } from "../UserInfo";
 const BasicCardBox = styled.div`
   position: relative;
   width: 335px;
-  height: 113px;
   margin-bottom: 12px;
   margin-left: 20px;
   border-radius: 16px;
@@ -22,9 +21,10 @@ const BasicCardBox = styled.div`
 `;
 
 const Title = styled.strong`
-  position: absolute;
+  /* position: absolute;
   top: 16px;
-  left: 16px;
+  left: 16px; */
+  margin-left: 16px;
   width: 303px;
   font-family: Roboto;
   font-size: 18px;
@@ -35,23 +35,23 @@ const Title = styled.strong`
 export const BasicCard = (props) => {
   const [storyIds, setStoryIds] = useState([]);
 
-  useEffect(() => {
+  useEffect((props) => {
     getTopStories().then((ids) => setStoryIds(ids));
   }, []);
 
-  useEffect(() => {
+  useEffect((props) => {
     getNewStories().then((ids) => setStoryIds(ids));
   }, []);
 
-  useEffect(() => {
+  useEffect((props) => {
     getShowStories().then((ids) => setStoryIds(ids));
   }, []);
 
-  useEffect(() => {
+  useEffect((props) => {
     getAskStories().then((ids) => setStoryIds(ids));
   }, []);
 
-  useEffect(() => {
+  useEffect((props) => {
     getJobStories().then((ids) => setStoryIds(ids));
   }, []);
 

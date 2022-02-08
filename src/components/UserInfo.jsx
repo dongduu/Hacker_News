@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const UserInfoBox = styled.div`
-  position: absolute;
-  bottom: 12px;
-  left: 16px;
+  position: relative;
+  margin-top: 12px;
+  margin-left: 16px;
+  padding-bottom: 12px;
   width: 303px;
   height: 25px;
   border-top: #f0f0f6 solid 1px;

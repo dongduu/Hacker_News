@@ -57,7 +57,7 @@ const Title = styled.strong`
   color: #111;
 `;
 
-export const DetailCard = () => {
+export const DetailCard = props => {
   const [storyIds, setStoryIds] = useState([]);
 
   useEffect(() => {

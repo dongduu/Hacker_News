@@ -38,12 +38,13 @@ const Article = styled.p`
   top: 104px;
   left: 20px;
   font-family: Roboto;
+  font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   color: #767676;
 `;
 
-const Writer = styled.p`
+const Writer = styled.a`
   position: absolute;
   width: 160px;
   height: 16px;
@@ -82,7 +83,7 @@ export const Ranking = () => {
             <Article>
               <NewsTitle key={i} storyId={storyId} />
             </Article>
-            <Writer>bryanrasmussen</Writer>
+            <Writer href="">{storyId}</Writer>
           </Top>
         </SwiperSlide>
       ))}
