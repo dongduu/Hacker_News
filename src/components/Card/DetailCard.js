@@ -13,7 +13,6 @@ import { UserInfo } from "../UserInfo";
 const DetailCardBox = styled.div`
   position: relative;
   width: 335px;
-  height: 135px;
   margin-bottom: 12px;
   margin-left: 20px;
   border-radius: 16px;
@@ -57,7 +56,7 @@ const Title = styled.strong`
   color: #111;
 `;
 
-export const DetailCard = props => {
+export const DetailCard = (props) => {
   const [storyIds, setStoryIds] = useState([]);
 
   useEffect(() => {
