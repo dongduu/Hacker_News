@@ -1,6 +1,5 @@
 import { Title } from "../components/Header/Title";
 import { Nav } from "../components/Header/Nav";
-import { View } from "../components/View";
 import { ShowList } from "../components/List/ShowList";
 
 export const Show = () => {
@@ -8,7 +7,6 @@ export const Show = () => {
     <div>
       <Title />
       <Nav />
-      <View />
       <ShowList />
     </div>
   );

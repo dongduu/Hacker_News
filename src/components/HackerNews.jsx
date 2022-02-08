@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { View } from "../components/View";
 import { ArticleList } from "../components/List/ArticleList";
 
 const HackerNewsBox = styled.div`
@@ -11,7 +10,6 @@ const HackerNewsBox = styled.div`
 export const HackerNews = () => {
   return (
     <HackerNewsBox>
-      <View />
       <ArticleList />
     </HackerNewsBox>
   );

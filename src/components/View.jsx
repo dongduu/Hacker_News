@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 const Veiwbox = styled.div`
@@ -54,8 +55,14 @@ const ReadingIcon = styled.img`
 `;
 
 export const View = () => {
+  const [view, setView] = useState("zoomMode");
+
+  const changeReadingMode = (e) => {
+    setView(false);
+  };
+
   return (
-    <Veiwbox>
+    <Veiwbox className={view}>
       <NewBox>
         <IconImg src={require("./images/check.png")} alt="check" />
         <NewMode>NEW</NewMode>
@@ -64,7 +71,11 @@ export const View = () => {
         <IconImg src={require("./images/checked.png")} alt="checked" />
         <TopMode>TOP</TopMode>
       </TopBox>
-      <ReadingIcon src={require("./images/reading.png")} alt="reading" />
+      <ReadingIcon
+        onClick={changeReadingMode}
+        src={require("./images/reading.png")}
+        alt="reading"
+      />
     </Veiwbox>
   );
 };
