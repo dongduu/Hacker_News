@@ -20,12 +20,10 @@ const BasicCardBox = styled.div`
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
 `;
 
-const Title = styled.strong`
-  /* position: absolute;
-  top: 16px;
-  left: 16px; */
-  margin-left: 16px;
+const Title = styled.div`
   width: 303px;
+  padding-top: 16px;
+  margin: 0 16px 0;
   font-family: Roboto;
   font-size: 18px;
   line-height: 24px;
