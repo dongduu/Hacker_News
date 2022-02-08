@@ -62,7 +62,7 @@ export const View = () => {
   };
 
   return (
-    <Veiwbox className={view}>
+    <Veiwbox>
       <NewBox>
         <IconImg src={require("./images/check.png")} alt="check" />
         <NewMode>NEW</NewMode>

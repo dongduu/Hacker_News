@@ -35,11 +35,11 @@ export const Nav = () => {
       <NavBtn className={navStyle} href="/Article">
         Article
       </NavBtn>
-      <NavBtn className={navStyle} href="/Show">
-        Show
-      </NavBtn>
       <NavBtn className={navStyle} href="/Ask">
         Ask
+      </NavBtn>
+      <NavBtn className={navStyle} href="/Show">
+        Show
       </NavBtn>
       <NavBtn className={navStyle} href="/Jobs">
         Jobs
