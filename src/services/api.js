@@ -8,6 +8,17 @@ export const ASKSTORIES_URL = `${BASE_URL}/askstories.json`;
 export const JOBSTORIES_URL = `${BASE_URL}/jobstories.json`;
 export const ITEM_URL = `${BASE_URL}/item/`;
 
+export const getStory = async (storyId) => {
+  try {
+    const res = await axios
+      .get(`${ITEM_URL + storyId}.json`)
+      .then(({ data }) => data);
+    return res;
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 export const getTopStories = async () => {
   try {
     const res = await axios.get(TOPSTORIES_URL).then(({ data }) => data);
@@ -47,17 +58,6 @@ export const getAskStories = async () => {
 export const getJobStories = async () => {
   try {
     const res = await axios.get(JOBSTORIES_URL).then(({ data }) => data);
-    return res;
-  } catch (err) {
-    console.error(err);
-  }
-};
-
-export const getStory = async (storyId) => {
-  try {
-    const res = await axios
-      .get(`${ITEM_URL + storyId}.json`)
-      .then(({ data }) => data);
     return res;
   } catch (err) {
     console.error(err);

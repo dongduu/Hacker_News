@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "../styles.css";
 import "swiper/scss/pagination";
 import SwiperCore, { Pagination } from "swiper";
-import "swiper/css";
 
 const Top = styled.div`
   position: relative;

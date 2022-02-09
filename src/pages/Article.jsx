@@ -8,8 +8,8 @@ export const Article = () => {
     <div>
       <Title />
       <Nav />
-      {/* <ArticleList /> */}
-      <News />
+      <ArticleList />
+      {/* <News /> */}
     </div>
   );
 };
