@@ -4,17 +4,16 @@ import { BasicCard } from "../Card/BasicCard";
 import { DetailCard } from "../Card/DetailCard";
 import { View } from "../View";
 
-export const ArticleList = () => {
+export const ArticleList = ({ storyIds }) => {
   const [veiw, setView] = useState(true);
 
-  return (
-    <>
-      <View />
-      {veiw ? (
-        <BasicCard props="getNewStories" />
-      ) : (
-        <DetailCard props="getNewStories" />
-      )}
-    </>
-  );
+  return;
+  <>
+    {storyIds.slice(0, 10).map((id, index) => {
+      <BasicCard />;
+    })}
+  </>;
 };
+
+// return storyIds.slice(0, 10).map((storyId) => (
+//   <BasicCard />)
