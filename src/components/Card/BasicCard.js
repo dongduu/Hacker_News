@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NewsTitle } from "./Story";
-import { getStory } from "../../services/api";
+import { getData } from "../../services/api";
 import styled from "styled-components";
 import { UserInfo } from "../UserInfo";
 
@@ -14,7 +13,7 @@ const BasicCardBox = styled.div`
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
 `;
 
-const Title = styled.div`
+const Title = styled.a`
   width: 303px;
   padding-top: 16px;
   margin: 0 16px 0;
@@ -24,23 +23,21 @@ const Title = styled.div`
   color: #111;
 `;
 
-export const BasicCard = ({ storyId }) => {
-  const [story, setStory] = useState({});
+function BasicCard({ id }) {
+  const [listId, setListId] = useState({});
+  const [idUrl, setIdUrl] = useState("");
 
   useEffect(() => {
-    getStory(storyId).then((data) => {
-      if (data && data.url) {
-        setStory(data);
-      }
-    });
+    getData(id).then((data) => data && setListId(data));
+    setIdUrl(`https://hacker-news.firebaseio.com/v0/item/:{id}.json`);
   }, []);
 
-  return story.slice(0, 10).map((storyId, i) => (
+  return (
     <BasicCardBox>
-      <Title>
-        <NewsTitle key={i} storyId={storyId} />
-      </Title>
+      <Title href={idUrl}>{listId.title}</Title>
       <UserInfo />
     </BasicCardBox>
-  ));
-};
+  );
+}
+
+export default BasicCard;
