@@ -40,9 +40,9 @@ export const Home = () => {
       <Nav />
       <HomeMain />
       <View />
-      {newIds.slice(0, 10).map((id, index) => (
+      {/* {newIds.slice(0, 10).map((id, index) => (
         <BasicCard id={id} key={id} index={index} />
-      ))}
+      ))} */}
     </>
   );
 };

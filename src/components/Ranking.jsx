@@ -29,7 +29,7 @@ const Rank = styled.strong`
   color: #ff6600;
 `;
 
-const Article = styled.p`
+const Article = styled.a`
   position: absolute;
   width: 160px;
   height: 96px;
@@ -59,7 +59,15 @@ const SwiperBox = styled(Swiper)``;
 
 // SwiperCore.use([Pagination]);
 
-export const Ranking = () => {
+export const Ranking = ({ id }) => {
+  const [listId, setListId] = useState({});
+  const [idUrl, setIdUrl] = useState("");
+
+  useEffect(() => {
+    getData(id).then((data) => data && setListId(data));
+    setIdUrl(`https://hacker-news.firebaseio.com/v0/item/:{id}.json`);
+  }, []);
+
   return (
     <SwiperBox
       slidesPerView={1}
@@ -71,8 +79,8 @@ export const Ranking = () => {
       <SwiperSlide>
         <Top>
           <Rank>0</Rank>
-          <Article></Article>
-          <Writer href="">dd</Writer>
+          <Article href={idUrl}>{listId.title}</Article>
+          <Writer href={idUrl}>{listId.by}</Writer>
         </Top>
       </SwiperSlide>
     </SwiperBox>

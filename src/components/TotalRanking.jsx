@@ -1,7 +1,8 @@
-// import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Ranking } from "./Ranking";
 import styled from "styled-components";
 import "swiper/swiper.scss";
+import { getNewIds } from "../services/api";
 
 const RankingBox = styled.div`
   width: 375px;
@@ -28,12 +29,18 @@ const RankingBackground = styled.div`
 `;
 
 export const TotalRanking = () => {
+  const [newIds, setNewIds] = useState([]);
+  useEffect(() => {
+    getNewIds().then((data) => setNewIds(data));
+  }, []);
   return (
     <RankingBox>
       <RankingTitle>Current Total Top 5</RankingTitle>
       <RankingBackground>
         <SlideBox>
-          <Ranking />
+          {newIds.slice(0, 5).map((id, index) => (
+            <Ranking id={id} key={id} index={index} />
+          ))}
         </SlideBox>
       </RankingBackground>
     </RankingBox>
