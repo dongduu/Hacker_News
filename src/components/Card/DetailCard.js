@@ -127,7 +127,7 @@ function DetailCard({ id, index }) {
       </NewsHeader>
       <Title href={idUrl}>{listId.title}</Title>
       <UserInfoBox>
-        <UserName href="">
+        <UserName href="https://hacker-news.firebaseio.com/v0/user/:{id}.json">
           {listId.by}
           <UserPlus src={require("../images/arrow.png")} alt="user" />
         </UserName>

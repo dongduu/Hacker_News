@@ -13,8 +13,8 @@
 .App {
   height: 812px;
   width: 375px;
-  border: solid black 1px;
-  /* overflow: hidden; */
+  /* border: solid black 1px; */
+  /* overflow: scroll; */
 }
 .native {
   height: 44px;

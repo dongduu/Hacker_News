@@ -18,7 +18,7 @@ export const Article = () => {
       <Nav />
       <View />
       {newIds.slice(0, 10).map((id, index) => (
-        <DetailCard id={id} key={id} index={index} />
+        <BasicCard id={id} key={id} index={index} />
       ))}
     </>
   );
