@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Ranking } from "./Ranking";
 import styled from "styled-components";
 import "swiper/swiper.scss";
-import { getNewIds } from "../services/api";
+import { getTopIds } from "../services/api";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/scss/pagination";
+import SwiperCore, { Pagination } from "swiper";
 
 const RankingBox = styled.div`
   width: 375px;
@@ -28,20 +31,32 @@ const RankingBackground = styled.div`
   background-color: #f2f3f7;
 `;
 
+SwiperCore.use([Pagination]);
+
 export const TotalRanking = () => {
-  const [newIds, setNewIds] = useState([]);
+  const [topIds, setTopIds] = useState([]);
   useEffect(() => {
-    getNewIds().then((data) => setNewIds(data));
+    getTopIds().then((data) => setTopIds(data));
   }, []);
   return (
     <RankingBox>
       <RankingTitle>Current Total Top 5</RankingTitle>
       <RankingBackground>
-        <SlideBox>
-          {newIds.slice(0, 5).map((id, index) => (
-            <Ranking id={id} key={id} index={index} />
-          ))}
-        </SlideBox>
+        <Swiper
+          slidesPerView={1}
+          centeredSlides={true}
+          pagination={{
+            clickable: true
+          }}
+        >
+          <SlideBox>
+            {topIds.slice(0, 5).map((id, index) => (
+              <SwiperSlide>
+                <Ranking id={id} key={id} index={index} />
+              </SwiperSlide>
+            ))}
+          </SlideBox>
+        </Swiper>
       </RankingBackground>
     </RankingBox>
   );

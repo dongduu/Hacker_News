@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "../styles.css";
-import "swiper/scss/pagination";
-import SwiperCore, { Pagination } from "swiper";
 import { getData } from "../services/api";
 
 const Top = styled.div`
@@ -55,10 +52,6 @@ const Writer = styled.a`
   color: #999;
 `;
 
-const SwiperBox = styled(Swiper)``;
-
-// SwiperCore.use([Pagination]);
-
 export const Ranking = ({ id }) => {
   const [listId, setListId] = useState({});
   const [idUrl, setIdUrl] = useState("");
@@ -69,20 +62,10 @@ export const Ranking = ({ id }) => {
   }, []);
 
   return (
-    <SwiperBox
-      slidesPerView={1}
-      centeredSlides={true}
-      pagination={{
-        clickable: true
-      }}
-    >
-      <SwiperSlide>
-        <Top>
-          <Rank>0</Rank>
-          <Article href={idUrl}>{listId.title}</Article>
-          <Writer href={idUrl}>{listId.by}</Writer>
-        </Top>
-      </SwiperSlide>
-    </SwiperBox>
+    <Top>
+      <Rank>0</Rank>
+      <Article href={idUrl}>{listId.title}</Article>
+      <Writer href={idUrl}>{listId.by}</Writer>
+    </Top>
   );
 };

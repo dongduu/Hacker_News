@@ -16,7 +16,7 @@ export const getData = async (dataId) => {
   return result;
 };
 //--------------- top data--------------- //
-export const getTopStoryIds = async () => {
+export const getTopIds = async () => {
   const result = await axios.get(TOPSTORIES_URL).then(({ data }) => data);
   return result;
 };
