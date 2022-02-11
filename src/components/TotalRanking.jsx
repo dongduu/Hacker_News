@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-// import { Ranking } from "./Ranking";
+import { Ranking } from "./Ranking";
 import styled from "styled-components";
 import "swiper/swiper.scss";
 
@@ -32,7 +32,9 @@ export const TotalRanking = () => {
     <RankingBox>
       <RankingTitle>Current Total Top 5</RankingTitle>
       <RankingBackground>
-        <SlideBox>{/* <Ranking /> */}</SlideBox>
+        <SlideBox>
+          <Ranking />
+        </SlideBox>
       </RankingBackground>
     </RankingBox>
   );

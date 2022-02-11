@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "../styles.css";
 import "swiper/scss/pagination";
 import SwiperCore, { Pagination } from "swiper";
+import { getData } from "../services/api";
 
 const Top = styled.div`
   position: relative;
@@ -58,32 +59,22 @@ const SwiperBox = styled(Swiper)``;
 
 // SwiperCore.use([Pagination]);
 
-// export const Ranking = () => {
-//   const [storyIds, setStoryIds] = useState([]);
-
-//   useEffect(() => {
-//     getTopStories().then((ids) => setStoryIds(ids));
-//   }, []);
-
-//   return (
-//     <SwiperBox
-//       slidesPerView={1}
-//       centeredSlides={true}
-//       pagination={{
-//         clickable: true
-//       }}
-//     >
-//       {storyIds.slice(0, 5).map((storyId, i) => (
-//         <SwiperSlide>
-//           <Top>
-//             <Rank>0{`${i + 1}`}</Rank>
-//             <Article>
-//               <NewsTitle key={i} storyId={storyId} />
-//             </Article>
-//             <Writer href="">{storyId}</Writer>
-//           </Top>
-//         </SwiperSlide>
-//       ))}
-//     </SwiperBox>
-//   );
-// };
+export const Ranking = () => {
+  return (
+    <SwiperBox
+      slidesPerView={1}
+      centeredSlides={true}
+      pagination={{
+        clickable: true
+      }}
+    >
+      <SwiperSlide>
+        <Top>
+          <Rank>0</Rank>
+          <Article></Article>
+          <Writer href="">dd</Writer>
+        </Top>
+      </SwiperSlide>
+    </SwiperBox>
+  );
+};
