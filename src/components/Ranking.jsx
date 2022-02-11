@@ -52,7 +52,7 @@ const Writer = styled.a`
   color: #999;
 `;
 
-export const Ranking = ({ id }) => {
+export const Ranking = ({ id, index }) => {
   const [listId, setListId] = useState({});
   const [idUrl, setIdUrl] = useState("");
 
@@ -63,7 +63,7 @@ export const Ranking = ({ id }) => {
 
   return (
     <Top>
-      <Rank>0</Rank>
+      <Rank>0{index + 1}</Rank>
       <Article href={idUrl}>{listId.title}</Article>
       <Writer href={idUrl}>{listId.by}</Writer>
     </Top>

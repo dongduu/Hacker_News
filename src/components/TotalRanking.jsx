@@ -31,6 +31,22 @@ const RankingBackground = styled.div`
   background-color: #f2f3f7;
 `;
 
+const SwiperBox = styled(Swiper)`
+  .swiper-pagination-horizontal {
+    margin-bottom: 32px;
+    .swiper-pagination-bullet {
+      background-color: #E5E5EC;
+      margin-right: 5px;
+      width: 5px;
+      height: 5px;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #FF6600;
+      border-radius: 5px;
+    }
+`;
+
 SwiperCore.use([Pagination]);
 
 export const TotalRanking = () => {
@@ -42,7 +58,7 @@ export const TotalRanking = () => {
     <RankingBox>
       <RankingTitle>Current Total Top 5</RankingTitle>
       <RankingBackground>
-        <Swiper
+        <SwiperBox
           slidesPerView={1}
           centeredSlides={true}
           pagination={{
@@ -56,7 +72,7 @@ export const TotalRanking = () => {
               </SwiperSlide>
             ))}
           </SlideBox>
-        </Swiper>
+        </SwiperBox>
       </RankingBackground>
     </RankingBox>
   );
