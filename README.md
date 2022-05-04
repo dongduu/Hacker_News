@@ -3,11 +3,7 @@
 해커뉴스(https://news.ycombinator.com/) 리딩 페이지 만들기
 
 ## Stacks
-- React
-- styled-component
-- Axios
-- swiper
-- figma
+<img width="700" alt="해커뉴스 스택" src="https://user-images.githubusercontent.com/88874976/166706780-f0404c54-2fb3-472d-aa0f-bd29a1388c4f.png">
 
 ## Skill
 - 메인 페이지에 Top News 5 표시
