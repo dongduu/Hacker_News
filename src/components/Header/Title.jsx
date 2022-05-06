@@ -48,7 +48,7 @@ export const Title = () => {
       <MainTitle href="">ReHecker News</MainTitle>
 
       <DarkMode>
-        <img src={require("../images/moon.png")} alt="darkmode" />
+        <img src={require("../images/darkmode.png")} alt="darkmode" />
       </DarkMode>
       <Help>
         <img src={require("../images/help.png")} alt="help" />
