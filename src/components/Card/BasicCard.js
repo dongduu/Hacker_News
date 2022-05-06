@@ -71,7 +71,7 @@ const PointInfo = styled.p`
   right: 0;
   font-family: Roboto;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 20px;
   color: #505050;
 `;
 
@@ -81,7 +81,7 @@ const CommentInfo = styled.p`
   right: 0;
   font-family: Roboto;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 20px;
   color: #ff6600;
 `;
 
