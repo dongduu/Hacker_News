@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { ArticleList } from "../components/List/ArticleList";
 
 const HackerNewsBox = styled.div`
   position: relative;
